@@ -76,6 +76,9 @@ module.exports.createSession = function(req, res){
         }
     })
 }
-module.exports.posts = function(req, res){
-    return res.end("<h1>Your Post has been uploaded</h1>")
+
+//handle sign out
+module.exports.signOut = function(req, res){
+    res.clearCookie('user_id');
+    return res.redirect('/user/sign-in');
 }
