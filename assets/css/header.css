@@ -1,0 +1,30 @@
+header {
+  display: flex;
+  justify-content: space-between;
+  background-color: #175c86;
+  height: 26px;
+  color: white;
+  font-size: 10px;
+}
+
+header p {
+  margin: 6px 4px;
+  font-size: 12px;
+}
+
+header ul {
+  list-style: none;
+  display: flex;
+  margin: 6px 4px;
+}
+
+header ul a {
+  margin: 0;
+  text-decoration: none;
+  color: white;
+}
+
+header ul li {
+  margin: 0;
+  margin-left: 4px;
+}

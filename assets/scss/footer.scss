@@ -1,0 +1,25 @@
+footer{
+    margin: 0;
+    height: 40px;
+    background-color: rgb(99, 99, 99);
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    font-size: 10px;
+    p{
+        margin: 14px 4px;
+    }
+    #footer-links{
+        margin: 0;
+        display: flex;
+        a{
+            margin: 14px 4px;
+            color: white;
+            text-decoration: none;
+        }
+        a:hover{
+            color: rgb(233, 236, 220);
+        }
+    }
+
+}
