@@ -59,4 +59,5 @@ section li p small {
   justify-content: center;
   align-items: center;
   border-radius: 2px;
+  padding: 0 3px 0 3px;
 }

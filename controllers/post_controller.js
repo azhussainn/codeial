@@ -1,6 +1,6 @@
 const Post = require('../models/post');
 module.exports.create = function(req, res){
-    if(req.body.content != "" && req.isAuthenticated()){
+    if(req.body.content != ""){
         Post.create({
             content : req.body.content,
             user : req.user._id
