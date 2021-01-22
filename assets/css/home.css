@@ -1,0 +1,62 @@
+h2 {
+  text-align: center;
+  color: #34568b;
+}
+
+section {
+  margin: 16px;
+}
+
+section input[type='submit'] {
+  background-color: #34568b;
+  color: white;
+  border: 1px solid #1d2c44;
+  height: 24px;
+  border-radius: 2px;
+}
+
+section input[type='submit']:hover {
+  cursor: pointer;
+  background-color: #5b84c5;
+}
+
+section h4 {
+  color: #34568b;
+  text-align: center;
+  font-size: 18px;
+  margin: 18px;
+}
+
+section #posts-list-container {
+  margin: 0 auto;
+}
+
+section ul {
+  list-style: none;
+  padding: 0;
+}
+
+section li {
+  background-color: white;
+  text-align: center;
+  border-radius: 2px;
+}
+
+section li p {
+  padding: 15px;
+  display: flex;
+  justify-content: space-between;
+  text-align: justify;
+  font-size: 12px;
+}
+
+section li p small {
+  background-color: lightgray;
+  margin: 0 10px 0 10px;
+  height: 25px;
+  display: flex;
+  min-width: 50px;
+  justify-content: center;
+  align-items: center;
+  border-radius: 2px;
+}

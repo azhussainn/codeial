@@ -1,0 +1,54 @@
+h2{
+    text-align: center;
+    color: rgb(52, 86, 139);
+}
+
+section{
+    margin: 16px;
+    input[type='submit']{
+        background-color: rgb(52, 86, 139);
+        color: white;
+        border: 1px solid rgb(29, 44, 68);
+        height: 24px;
+        border-radius: 2px;
+    }
+    input[type='submit']:hover{
+        cursor: pointer;
+        background-color: rgb(91, 132, 197);
+    }
+    h4{
+        color: rgb(52, 86, 139);
+        text-align: center;
+        font-size: 18px;
+        margin: 18px;
+    }
+    #posts-list-container{
+        margin: 0 auto;
+    }
+    ul{
+        list-style: none;
+        padding: 0;
+    }
+    li{
+        background-color: white;
+        text-align: center;
+        border-radius: 2px;
+        p{
+            padding: 15px;
+            display: flex;
+            justify-content: space-between;
+            text-align: justify;
+            font-size: 12px;
+            small{
+                background-color: rgb(211, 211, 211);
+                margin: 0 10px 0 10px;
+                height: 25px;
+                display: flex;
+                min-width: 50px;
+                justify-content: center;
+                align-items: center;
+                border-radius: 2px;
+            }
+        }
+    }
+}

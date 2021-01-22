@@ -1,26 +1,25 @@
 footer {
-  margin: 0;
   height: 40px;
-  background-color: #636363;
+  background-color: #175c86;
   color: white;
   display: flex;
   justify-content: space-between;
-  font-size: 10px;
+  font-size: 12px;
 }
 
 footer p {
-  margin: 14px 4px;
+  margin: 13px 0 0 16px;
 }
 
 footer #footer-links {
-  margin: 0;
   display: flex;
+  margin: 13px 16px 0 0;
 }
 
 footer #footer-links a {
-  margin: 14px 4px;
   color: white;
   text-decoration: none;
+  margin-left: 10px;
 }
 
 footer #footer-links a:hover {

@@ -4,18 +4,22 @@ header {
   background-color: #175c86;
   height: 26px;
   color: white;
-  font-size: 10px;
+  font-size: 12px;
 }
 
 header p {
-  margin: 6px 4px;
-  font-size: 12px;
+  margin: 5px 0 0 16px;
+}
+
+header p a {
+  text-decoration: none;
+  color: inherit;
 }
 
 header ul {
   list-style: none;
   display: flex;
-  margin: 6px 4px;
+  margin: 6px 16px 0 0;
 }
 
 header ul a {
@@ -26,5 +30,5 @@ header ul a {
 
 header ul li {
   margin: 0;
-  margin-left: 4px;
+  margin-left: 10px;
 }
