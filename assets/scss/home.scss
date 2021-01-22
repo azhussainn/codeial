@@ -1,10 +1,16 @@
 h2{
     text-align: center;
     color: rgb(52, 86, 139);
+    padding-top: 10px;
+}
+
+textarea{
+    max-width: 90%;
 }
 
 section{
     margin: 16px;
+    margin-bottom: 50px;
     input[type='submit']{
         background-color: rgb(52, 86, 139);
         color: white;
@@ -33,12 +39,14 @@ section{
         background-color: white;
         text-align: center;
         border-radius: 2px;
+        padding-bottom: 10px;
         p{
-            padding: 15px;
+            
             display: flex;
             justify-content: space-between;
             text-align: justify;
             font-size: 12px;
+            padding: 15px 4px 8px 10px;
             small{
                 background-color: rgb(211, 211, 211);
                 margin: 0 10px 0 10px;
@@ -49,6 +57,26 @@ section{
                 align-items: center;
                 border-radius: 2px;
                 padding: 0 3px 0 3px;
+            }
+        }
+        .post_comments{
+            font-size: 8px;
+            margin: 0 0px 4px 10px;
+            text-align: left;
+            .comment{
+                min-width : 200px;
+                min-height: 40px;
+            }
+            .commentBtn{
+                font-size: 8px;
+                background-color: rgb(52, 86, 139);
+                color: white;
+                border: 1px solid rgb(29, 44, 68);
+                border-radius: 2px;
+            }
+            .commentBtn:hover{
+                cursor: pointer;
+                background-color: rgb(91, 132, 197);
             }
         }
     }

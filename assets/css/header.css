@@ -5,6 +5,9 @@ header {
   height: 26px;
   color: white;
   font-size: 12px;
+  position: fixed;
+  top: 0;
+  width: 100%;
 }
 
 header p {

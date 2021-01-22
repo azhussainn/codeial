@@ -1,10 +1,16 @@
 h2 {
   text-align: center;
   color: #34568b;
+  padding-top: 10px;
+}
+
+textarea {
+  max-width: 90%;
 }
 
 section {
   margin: 16px;
+  margin-bottom: 50px;
 }
 
 section input[type='submit'] {
@@ -40,14 +46,15 @@ section li {
   background-color: white;
   text-align: center;
   border-radius: 2px;
+  padding-bottom: 10px;
 }
 
 section li p {
-  padding: 15px;
   display: flex;
   justify-content: space-between;
   text-align: justify;
   font-size: 12px;
+  padding: 15px 4px 8px 10px;
 }
 
 section li p small {
@@ -60,4 +67,28 @@ section li p small {
   align-items: center;
   border-radius: 2px;
   padding: 0 3px 0 3px;
+}
+
+section li .post_comments {
+  font-size: 8px;
+  margin: 0 0px 4px 10px;
+  text-align: left;
+}
+
+section li .post_comments .comment {
+  min-width: 200px;
+  min-height: 40px;
+}
+
+section li .post_comments .commentBtn {
+  font-size: 8px;
+  background-color: #34568b;
+  color: white;
+  border: 1px solid #1d2c44;
+  border-radius: 2px;
+}
+
+section li .post_comments .commentBtn:hover {
+  cursor: pointer;
+  background-color: #5b84c5;
 }

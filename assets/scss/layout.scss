@@ -2,5 +2,8 @@ body{
     margin: 0;
     background-color: #E4E4E4;
     font-family: sans-serif;
+    display:flex; 
+    flex-direction:column;
+    height: 100%;
 }
 
