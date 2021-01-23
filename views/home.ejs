@@ -1,5 +1,36 @@
-<h1>
-    Codeial <%= title %>
-</h1>
-<img src="/images/1.png" alt="pic">
 <link rel="stylesheet" href="/css/home.css">
+
+<section id = "feed-posts">
+    <h2 id = "main-heading">
+        <%= title %>
+    </h2>
+    <%if(locals.user){%>
+        <form action="/posts/create" id = "post-form" method="POST">
+            <textarea name="content"  cols="30" rows="3" placeholder="Type Here..."></textarea>
+            <br>
+            <input id = "post-submit" type="submit" value="Post" id = "post-submit">
+        </form>
+    <%}%>
+
+
+    <div id = "posts-list-container">
+        <h4>Posts</h4>
+        <ul>
+            <%for(post of posts){%>
+                <!-- include the post file -->
+                <%-include('_post')-%>
+            <%}%>
+        </ul>
+    </div>
+</section>
+
+<section id = "user-friends">
+    <h4>Friends</h4>
+    <%for(u of all_users){%>
+        <p>
+            <a href="/user/profile/<%= u.id %>">
+                <%= u.name %>
+            </a>
+        </p>
+    <%}%>
+</section>
