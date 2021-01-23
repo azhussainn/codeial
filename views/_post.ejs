@@ -18,7 +18,7 @@
     <div class = "post_comments">
         <% if(locals.user){%>
             <form action="/comment/create" method="POST" class = "comment-form">
-                <textarea cols="20" rows="3" type="text" name = "content" placeholder="Type Here"></textarea>
+                <textarea class = "addComment" cols="20" rows="3" type="text" name = "content" placeholder="Type Here"></textarea>
                 <input type="hidden" name="post" value = "<%=post._id%>">
                 <br>
                 <button class = "commentBtn" type="submit">Comment</button>

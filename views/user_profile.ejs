@@ -1,17 +1,21 @@
 <link rel="stylesheet" href="/css/user_profile.css">
-<h1>
-    My Profile
-</h1>
-
-<% if(user.id == profile_user.id){%>
-    <!-- If user matches then show the form -->
-    <form action="/user/update/<%= profile_user.id %>" method="POST">
-        <input type="text" name = "name" placeholder="Your Name" value="<%= profile_user.name %>" required>
-        <input type="email" name="email" placeholder="Your Email" value="<%= profile_user.email %>" required>
-        <input type="submit" value="Update">
-    </form>
-<%}else{%>
-    <!-- else show only the profile info -->
-    <p><%= profile_user.name%></p>
-    <p><%= profile_user.email%></p>
-<%}%>
+<section>
+    <h2>Welcome <%= user.name%></h2>
+    <h4>Edit Details</h4>
+    <% if(user.id == profile_user.id){%>
+        <!-- If user matches then show the form -->
+        <form action="/user/update/<%= profile_user.id %>" method="POST">
+            <label for="name">Name</label>
+            <input type="text" name = "name"  value="<%= profile_user.name %>" placeholder="Your Name" required/>
+            <br>
+            <label for="email">Email</label>
+            <input type="email" name="email" placeholder="Your Email" value="<%= profile_user.email %>" required/>
+            <br>
+            <input id = "submit" type="submit" value="Update">
+        </form>
+    <%}else{%>
+        <!-- else show only the profile info -->
+        <p><%= profile_user.name%></p>
+        <p><%= profile_user.email%></p>
+    <%}%>
+</section>

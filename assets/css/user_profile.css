@@ -1,0 +1,37 @@
+section {
+  margin: 40px 0 8px 10px;
+}
+
+section h2 {
+  font-size: 14px;
+  text-align: center;
+  color: #1e657c;
+}
+
+section h4 {
+  font-size: 12px;
+  color: #1e657c;
+}
+
+section form {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  background-color: white;
+  padding: 10px;
+  border-radius: 2px;
+}
+
+section form #submit {
+  font-size: 14px;
+  max-width: 100px;
+  background-color: #523577;
+  color: white;
+  border: none;
+  border-radius: 2px;
+}
+
+section form #submit:hover {
+  background-color: #d17eb0;
+  cursor: pointer;
+}

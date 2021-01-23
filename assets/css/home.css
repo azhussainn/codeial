@@ -1,30 +1,34 @@
-body {
-  background-color: #e4e4e4;
-}
-
-section {
-  margin: 10px;
-  padding: 16px 0px 20px 0px;
-}
-
-section #main-heading {
-  text-align: center;
-  font-size: 22px;
-  color: #1e657c;
-}
-
-section #post-form {
-  max-width: 65%;
+#home-container {
+  display: flex;
   margin-bottom: 18px;
+  overflow-x: hidden;
 }
 
-section textarea {
-  max-width: 60%;
-  min-width: 60%;
-  font-size: 12px;
+textarea {
+  resize: vertical;
 }
 
-section #post-submit, section button {
+#createPost {
+  width: 98%;
+  min-height: 70px;
+}
+
+.addComment {
+  width: 75%;
+  font-size: 10px;
+}
+
+#feed-posts {
+  margin: 16px 5px 10px 10px;
+  padding: 16px 0px 20px 0px;
+  width: 85%;
+}
+
+#feed-posts #post-form {
+  margin: 18px 0 18px 0;
+}
+
+#feed-posts #post-submit, #feed-posts button {
   background-color: #523577;
   color: white;
   border: none;
@@ -33,12 +37,12 @@ section #post-submit, section button {
   font-size: 10px;
 }
 
-section #post-submit:hover, section button:hover {
+#feed-posts #post-submit:hover, #feed-posts button:hover {
   background-color: #d17eb0;
   cursor: pointer;
 }
 
-section small {
+#feed-posts small {
   padding: 4px;
   height: 12px;
   border-radius: 2px;
@@ -47,101 +51,101 @@ section small {
   font-size: 10px;
 }
 
-section a {
+#feed-posts a {
   text-decoration: none;
   color: white;
 }
 
-section #posts-list-container {
+#feed-posts #posts-list-container {
   background-color: white;
   border-radius: 2px;
 }
 
-section #posts-list-container h4 {
+#feed-posts #posts-list-container h4 {
   font-size: 18px;
   text-align: center;
   color: #1e657c;
   margin: 10px;
 }
 
-section #posts-list-container ul {
+#feed-posts #posts-list-container ul {
   list-style: none;
   margin: 0;
   padding: 0;
 }
 
-section #posts-list-container ul .onePost {
+#feed-posts #posts-list-container ul .onePost {
   border-bottom: 10px solid  #e4e4e4;
   margin: 0;
 }
 
-section #posts-list-container ul .onePost .post-content {
+#feed-posts #posts-list-container ul .onePost .post-content {
   display: flex;
   justify-content: space-between;
 }
 
-section #posts-list-container ul .onePost .post-content .post-text {
+#feed-posts #posts-list-container ul .onePost .post-content .post-text {
   margin: 10px 0 8px 10px;
   font-size: 14px;
 }
 
-section #posts-list-container ul .onePost .post-content .post-options {
+#feed-posts #posts-list-container ul .onePost .post-content .post-options {
   margin: 10px 10px 8px 10px;
   display: flex;
   flex-direction: column;
 }
 
-section #posts-list-container ul .onePost .post-content .post-options .post-name {
+#feed-posts #posts-list-container ul .onePost .post-content .post-options .post-name {
   background-color: #523577;
   margin-bottom: 3px;
   color: white;
 }
 
-section #posts-list-container ul .onePost .post-content .post-options .post-name:hover {
+#feed-posts #posts-list-container ul .onePost .post-content .post-options .post-name:hover {
   background-color: #d17eb0;
   cursor: pointer;
 }
 
-section #posts-list-container ul .onePost .post-content .post-options .delete-post {
+#feed-posts #posts-list-container ul .onePost .post-content .post-options .delete-post {
   background-color: #523577;
 }
 
-section #posts-list-container ul .onePost .post-content .post-options .delete-post:hover {
+#feed-posts #posts-list-container ul .onePost .post-content .post-options .delete-post:hover {
   background-color: #d17eb0;
   cursor: pointer;
 }
 
-section #posts-list-container .post_comments {
+#feed-posts #posts-list-container .post_comments {
   margin: 10px 10px 8px 10px;
   font-size: 12px;
   text-align: justify;
 }
 
-section #posts-list-container .post_comments .post-comments_list h5 {
+#feed-posts #posts-list-container .post_comments .post-comments_list h5 {
   font-size: 14px;
   text-align: center;
   color: #1e657c;
   margin: 8px;
 }
 
-section #posts-list-container .post_comments .post-comments_list .post-content {
+#feed-posts #posts-list-container .post_comments .post-comments_list .post-content {
   display: flex;
   justify-content: space-between;
 }
 
-section #posts-list-container .post_comments .post-comments_list .post-content .post-text {
+#feed-posts #posts-list-container .post_comments .post-comments_list .post-content .post-text {
   width: 78%;
   font-size: 12px;
 }
 
-section #posts-list-container .post_comments .post-comments_list .post-content .comment-options {
+#feed-posts #posts-list-container .post_comments .post-comments_list .post-content .comment-options {
   margin-left: 18px;
   display: flex;
   justify-content: center;
   flex-direction: column;
 }
 
-section #posts-list-container .post_comments .post-comments_list .post-content .comment-options .comment-user-name {
+#feed-posts #posts-list-container .post_comments .post-comments_list .post-content .comment-options .comment-user-name {
   background-color: #523577;
   color: white;
   margin-bottom: 3px;
@@ -150,12 +154,12 @@ section #posts-list-container .post_comments .post-comments_list .post-content .
   font-size: 8px;
 }
 
-section #posts-list-container .post_comments .post-comments_list .post-content .comment-options .comment-user-name:hover {
+#feed-posts #posts-list-container .post_comments .post-comments_list .post-content .comment-options .comment-user-name:hover {
   background-color: #d17eb0;
   cursor: pointer;
 }
 
-section #posts-list-container .post_comments .post-comments_list .post-content .comment-options .delete-comment {
+#feed-posts #posts-list-container .post_comments .post-comments_list .post-content .comment-options .delete-comment {
   background-color: #523577;
   color: white;
   border: none;
@@ -163,7 +167,45 @@ section #posts-list-container .post_comments .post-comments_list .post-content .
   font-size: 8px;
 }
 
-section #posts-list-container .post_comments .post-comments_list .post-content .comment-options .delete-comment:hover {
+#feed-posts #posts-list-container .post_comments .post-comments_list .post-content .comment-options .delete-comment:hover {
   background-color: #d17eb0;
   cursor: pointer;
+}
+
+#user-friends {
+  background-color: white;
+  margin: 10px 10px 10px 5px;
+  padding: 16px 0px 20px 0px;
+  width: 15%;
+}
+
+#user-friends h4 {
+  font-size: 14px;
+  color: #1e657c;
+  margin: 8px;
+  text-align: center;
+  border-bottom: 1px solid #e4e4e4;
+}
+
+#user-friends .friends {
+  margin: 4px auto;
+  font-size: 12px;
+  display: flex;
+  flex-direction: column;
+  max-width: 50px;
+}
+
+#user-friends .friends a {
+  color: white;
+  height: 14px;
+  background-color: #523577;
+  border-radius: 2px;
+  padding: 4px;
+  text-decoration: none;
+  text-align: center;
+  font-size: 10px;
+}
+
+#user-friends .friends a:hover {
+  background-color: #d17eb0;
 }
