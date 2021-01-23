@@ -5,6 +5,8 @@
     </p>
     <div id = "footer-links">
         <a href="/">Home</a>
-        <a href="/user/profile">Profile</a>
+        <%if(locals.user){%>
+            <a href="/user/profile/<%=locals.user.id %>">Profile</a>
+        <%}%>
     </div>
 </footer>
