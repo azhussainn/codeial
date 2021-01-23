@@ -1,112 +1,170 @@
-h2 {
-  text-align: center;
-  color: #34568b;
-  padding-top: 10px;
-}
-
-textarea {
-  max-width: 90%;
+body {
+  background-color: #e4e4e4;
 }
 
 section {
-  margin: 16px;
-  margin-bottom: 50px;
+  margin: 10px;
+  padding: 16px 0px 20px 0px;
 }
 
-section input[type='submit'] {
-  background-color: #34568b;
-  color: white;
-  border: 1px solid #1d2c44;
-  height: 24px;
-  border-radius: 2px;
-}
-
-section input[type='submit']:hover {
-  cursor: pointer;
-  background-color: #5b84c5;
-}
-
-section h4 {
-  color: #34568b;
+section #main-heading {
   text-align: center;
-  font-size: 18px;
-  margin: 18px;
+  font-size: 22px;
+  color: #1e657c;
+}
+
+section #post-form {
+  max-width: 65%;
+  margin-bottom: 18px;
+}
+
+section textarea {
+  max-width: 60%;
+  min-width: 60%;
+  font-size: 12px;
+}
+
+section #post-submit, section button {
+  background-color: #523577;
+  color: white;
+  border: none;
+  border-radius: 2px;
+  height: 22px;
+  font-size: 10px;
+}
+
+section #post-submit:hover, section button:hover {
+  background-color: #d17eb0;
+  cursor: pointer;
+}
+
+section small {
+  padding: 4px;
+  height: 12px;
+  border-radius: 2px;
+  display: flex;
+  justify-content: center;
+  font-size: 10px;
+}
+
+section a {
+  text-decoration: none;
+  color: white;
 }
 
 section #posts-list-container {
-  margin: 0 auto;
+  background-color: white;
+  border-radius: 2px;
+  padding: 10px 0 10px 0;
 }
 
-section ul {
+section #posts-list-container h4 {
+  font-size: 18px;
+  text-align: center;
+  color: #1e657c;
+  margin: 10px;
+}
+
+section #posts-list-container ul {
   list-style: none;
+  margin: 0;
   padding: 0;
 }
 
-section li {
-  background-color: white;
-  text-align: center;
-  border-radius: 2px;
-  padding-bottom: 10px;
+section #posts-list-container ul .onePost {
+  border-bottom: 10px solid  #e4e4e4;
+  margin: 0;
 }
 
-section li p {
+section #posts-list-container ul .onePost .post-content {
   display: flex;
   justify-content: space-between;
-  text-align: justify;
-  font-size: 12px;
-  padding: 15px 4px 8px 10px;
 }
 
-section li p small {
-  background-color: #477385;
-  color: white;
-  margin: 0 10px 0 10px;
-  height: 25px;
+section #posts-list-container ul .onePost .post-content .post-text {
+  margin: 10px 0 8px 10px;
+  font-size: 14px;
+}
+
+section #posts-list-container ul .onePost .post-content .post-options {
+  margin: 10px 10px 8px 10px;
   display: flex;
-  min-width: 50px;
-  justify-content: center;
-  align-items: center;
-  border-radius: 2px;
-  padding: 0 3px 0 3px;
+  flex-direction: column;
 }
 
-section li .post_comments {
-  font-size: 8px;
-  margin: 0 0px 4px 10px;
-  text-align: left;
-}
-
-section li .post_comments .comment {
-  min-width: 200px;
-  min-height: 40px;
-}
-
-section li .post_comments .commentBtn {
-  font-size: 8px;
-  background-color: #34568b;
+section #posts-list-container ul .onePost .post-content .post-options .post-name {
+  background-color: #523577;
+  margin-bottom: 3px;
   color: white;
-  border: 1px solid #1d2c44;
-  border-radius: 2px;
-  margin-bottom: 12px;
-  height: 20px;
 }
 
-section li .post_comments .commentBtn:hover {
+section #posts-list-container ul .onePost .post-content .post-options .post-name:hover {
+  background-color: #d17eb0;
   cursor: pointer;
-  background-color: #5b84c5;
 }
 
-section .comment-text {
-  margin: 4px 0 4px 0px;
-  padding: 0;
-  font-size: 10px;
-  border-bottom: 1px solid #bbbbbb;
-  margin-bottom: 12px;
+section #posts-list-container ul .onePost .post-content .post-options .delete-post {
+  background-color: #523577;
 }
 
-section .newSmall {
-  background-color: #8473b1;
+section #posts-list-container ul .onePost .post-content .post-options .delete-post:hover {
+  background-color: #d17eb0;
+  cursor: pointer;
+}
+
+section #posts-list-container .post_comments {
+  margin: 10px 10px 8px 10px;
+  font-size: 12px;
+  text-align: justify;
+}
+
+section #posts-list-container .post_comments .post-comments_list h5 {
+  font-size: 14px;
+  text-align: center;
+  color: #1e657c;
+  margin: 8px;
+}
+
+section #posts-list-container .post_comments .post-comments_list .post-content {
+  display: flex;
+  justify-content: space-between;
+}
+
+section #posts-list-container .post_comments .post-comments_list .post-content .post-text {
+  width: 78%;
+  font-size: 12px;
+}
+
+section #posts-list-container .post_comments .post-comments_list .post-content .comment-options {
+  margin-left: 18px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+section #posts-list-container .post_comments .post-comments_list .post-content .comment-options .comment-user-name {
+  background-color: #523577;
   color: white;
-  margin-bottom: 4px;
-  height: 20px;
+  margin-bottom: 3px;
+  display: flex;
+  justify-content: center;
+  font-size: 8px;
+}
+
+section #posts-list-container .post_comments .post-comments_list .post-content .comment-options .comment-user-name:hover {
+  background-color: #d17eb0;
+  cursor: pointer;
+}
+
+section #posts-list-container .post_comments .post-comments_list .post-content .comment-options .delete-comment {
+  background-color: #523577;
+  color: white;
+  border: none;
+  border-radius: 2px;
+  font-size: 8px;
+}
+
+section #posts-list-container .post_comments .post-comments_list .post-content .comment-options .delete-comment:hover {
+  background-color: #d17eb0;
+  cursor: pointer;
 }
