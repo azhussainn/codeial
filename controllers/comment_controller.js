@@ -27,5 +27,30 @@ module.exports.create = function(req, res){
     else{
         return res.redirect('back');
     }
+}
 
+module.exports.destroy = function(req, res){
+    
+    Comment.findById(req.params.id, function(err, comment){
+
+        Post.findById(comment.post, function(err, post){
+            if(err){console.log('error in finding post'); return }
+            else{
+                if(post.user == req.user.id || comment.user == req.user.id){
+                    let postId = comment.post;
+
+                    //deleting the comment
+                    comment.remove();
+
+                    //removing comment reference from the post array
+                    Post.findByIdAndUpdate(postId, {$pull : {comments : req.params.id}}, function(err, post){
+                        return res.redirect('back');
+                    })
+                }
+                else{
+                    return res.redirect('back');
+                }
+            }
+        })
+    })
 }
