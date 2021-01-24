@@ -6,9 +6,3 @@ body {
   height: 100%;
   background-color: #e4e4e4;
 }
-
-body #flash {
-  margin-top: 40px;
-  font-size: 18px;
-  color: #175c86;
-}
