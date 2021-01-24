@@ -1,10 +1,10 @@
 footer{
-    height: 40px;
+    height: 42px;
     background-color:  rgb(23, 92, 134);
     color: white;
     display: flex;
     justify-content: space-between;
-    font-size: 12px;
+    font-size: 16px;
     position:fixed;
     bottom:0;
     width:100%;
@@ -20,7 +20,7 @@ footer{
             margin-left: 10px;
         }
         a:hover{
-            color: rgb(233, 236, 220);
+            color: rgb(255, 192, 33);
         }
     }
 

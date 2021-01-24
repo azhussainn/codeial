@@ -2,9 +2,9 @@ header {
   display: flex;
   justify-content: space-between;
   background-color: #175c86;
-  height: 26px;
+  height: 30px;
   color: white;
-  font-size: 12px;
+  font-size: 16px;
   position: fixed;
   top: 0;
   width: 100%;
@@ -19,6 +19,10 @@ header p a {
   color: inherit;
 }
 
+header p a:hover {
+  color: #ffc021;
+}
+
 header ul {
   list-style: none;
   display: flex;
@@ -29,6 +33,10 @@ header ul a {
   margin: 0;
   text-decoration: none;
   color: white;
+}
+
+header ul a:hover {
+  color: #ffc021;
 }
 
 header ul li {

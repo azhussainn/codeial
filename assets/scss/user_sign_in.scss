@@ -3,7 +3,8 @@ body{
     text-align: center;
     h3{
         color:rgb(89, 50, 163);
-        margin-top: 100px;
+        margin-top: 200px;
+        font-size: 34px;
     }
     div{
         display: flex;
@@ -12,17 +13,21 @@ body{
             display: flex;
             flex-direction: column;
             justify-content: space-between;
+            input{
+                font-size: 24px;
+                min-width: 300px;
+            }
             button{
                 height: 40px;
                 background-color: rgb(248, 231, 74);
                 border: none;
                 border-radius: 2px;
                 color: rgb(36, 101, 122);
-                font-size: 16px;
+                font-size: 24px;
             }
             
             button:hover{
-                background-color: rgb(255, 230, 2);
+                background-color: rgb(255, 255, 168);
                 cursor: pointer;
             }
         }

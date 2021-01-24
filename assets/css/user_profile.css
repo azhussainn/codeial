@@ -3,27 +3,34 @@ section {
 }
 
 section h2 {
-  font-size: 14px;
+  font-size: 24px;
   text-align: center;
   color: #1e657c;
 }
 
 section h4 {
-  font-size: 12px;
+  font-size: 18px;
   color: #1e657c;
 }
 
 section form {
   display: flex;
   flex-direction: column;
-  width: 50%;
+  width: 80%;
   background-color: white;
   padding: 10px;
   border-radius: 2px;
 }
 
+section form label {
+  font-size: 22px;
+}
+
+section form input {
+  font-size: 24px;
+}
+
 section form #submit {
-  font-size: 14px;
   max-width: 100px;
   background-color: #523577;
   color: white;

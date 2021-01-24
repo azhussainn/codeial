@@ -2,55 +2,56 @@ const Post = require('../models/post');
 const Comment = require('../models/comment');
 
 
-module.exports.create = function(req, res){
+module.exports.create = async function(req, res){
     if(req.body.content != ""){
-        Post.findById(req.body.post, function(err, post){
+        try{
+            let post = await Post.findById(req.body.post);
             if(post){
-                Comment.create({
+                let comment = await Comment.create({
                     content : req.body.content,
                     user : req.user._id,
                     post : req.body.post
-                }, function(err, comment){
-                    if(err){ console.log('error in creating a comment'); return }
-                    else{
-                        post.comments.push(comment);
-                        post.save();
-                        return res.redirect('back');
-                    }
-                })
+                });
+                post.comments.push(comment);
+                post.save();
+                return res.redirect('back');
             }
             else{
                 return res.redirect('back');
-            }
-        })
+                }
+        }catch(err){
+            console.log('Error', err);
+            return;
+        }
     }
     else{
         return res.redirect('back');
     }
 }
 
-module.exports.destroy = function(req, res){
-    
-    Comment.findById(req.params.id, function(err, comment){
+module.exports.destroy = async function(req, res){
+    try{
+        let comment = await Comment.findById(req.params.id);
 
-        Post.findById(comment.post, function(err, post){
-            if(err){console.log('error in finding post'); return }
-            else{
-                if(post.user == req.user.id || comment.user == req.user.id){
-                    let postId = comment.post;
+        let post = await Post.findById(comment.post);
 
-                    //deleting the comment
-                    comment.remove();
+        if(post.user == req.user.id || comment.user == req.user.id){
+            let postId = comment.post;
 
-                    //removing comment reference from the post array
-                    Post.findByIdAndUpdate(postId, {$pull : {comments : req.params.id}}, function(err, post){
-                        return res.redirect('back');
-                    })
-                }
-                else{
-                    return res.redirect('back');
-                }
-            }
-        })
-    })
+            //deleting the comment
+            comment.remove();
+
+            //removing comment reference from the post array
+            let post = await Post.findByIdAndUpdate(postId,
+                {$pull : {comments : req.params.id}});
+            return res.redirect('back');
+        }
+        else{
+            return res.redirect('back');
+        }
+    }catch(err){
+        console.log('Error', err);
+        return;
+    }
+
 }

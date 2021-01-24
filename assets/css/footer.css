@@ -1,10 +1,10 @@
 footer {
-  height: 40px;
+  height: 42px;
   background-color: #175c86;
   color: white;
   display: flex;
   justify-content: space-between;
-  font-size: 12px;
+  font-size: 16px;
   position: fixed;
   bottom: 0;
   width: 100%;
@@ -26,5 +26,5 @@ footer #footer-links a {
 }
 
 footer #footer-links a:hover {
-  color: #e9ecdc;
+  color: #ffc021;
 }

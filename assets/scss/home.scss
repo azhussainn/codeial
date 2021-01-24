@@ -12,7 +12,7 @@ textarea{
 }
 .addComment{
     width: 75%;
-    font-size: 10px;
+    font-size: 14px;
 }
 
 #feed-posts{
@@ -27,8 +27,8 @@ textarea{
         color: white;
         border: none;
         border-radius: 2px;
-        height: 22px;
-        font-size: 10px;
+        height: 30px;
+        font-size: 16px;
     }
     #post-submit:hover,button:hover{
         background-color: rgb(209, 126, 176);
@@ -36,11 +36,11 @@ textarea{
     }
     small{
         padding: 4px;
-        height: 12px;
+        height: 18px;
         border-radius: 2px;
         display: flex;
         justify-content: center;
-        font-size: 10px;
+        font-size: 16px;
     }
     a{
         text-decoration: none;
@@ -67,7 +67,7 @@ textarea{
                     justify-content: space-between;
                     .post-text{
                         margin: 10px 0 8px 10px;
-                        font-size: 14px;
+                        font-size: 20px;
                     }
                     .post-options{
                         margin: 10px 10px 8px 10px;
@@ -97,7 +97,7 @@ textarea{
         }
         .post_comments{
             margin: 10px 10px 8px 10px;
-            font-size: 12px;
+            font-size: 15px;
             text-align: justify;
             .post-comments_list{
                 h5{
@@ -111,7 +111,7 @@ textarea{
                     justify-content: space-between;
                     .post-text{
                         width: 78%;
-                        font-size: 12px;
+                        font-size: 16px;
                     }
                     .comment-options{
                         margin-left: 18px;
@@ -124,7 +124,7 @@ textarea{
                             margin-bottom: 3px;
                             display: flex;
                             justify-content: center;
-                            font-size: 8px;
+                            font-size: 14px;
                         }
                         .comment-user-name:hover{
                             background-color: rgb(209, 126, 176);
@@ -135,7 +135,7 @@ textarea{
                             color: white;
                             border: none;
                             border-radius: 2px;
-                            font-size: 8px;
+
                         }
                         .delete-comment:hover{
                             background-color: rgb(209, 126, 176);
@@ -154,7 +154,7 @@ textarea{
     padding: 16px 0px 20px 0px;
     width: 15%;
     h4{
-        font-size: 14px;
+        font-size: 20px;
         color: rgb(30, 101, 124);
         margin: 8px;
         text-align: center;
@@ -162,19 +162,18 @@ textarea{
     }
     .friends{
         margin: 4px auto;
-        font-size: 12px;
         display: flex;
         flex-direction: column;
-        max-width: 50px;
+        max-width: 100px;
         a{
             color: white;
-            height: 14px;
+            min-height: 20px;
             background-color:  rgb(82, 53, 119);
             border-radius: 2px;
             padding: 4px;
             text-decoration: none;
             text-align: center;
-            font-size: 10px;
+            font-size: 16px;
         }
         a:hover{
             background-color: rgb(209, 126, 176);

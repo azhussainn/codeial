@@ -5,7 +5,8 @@ body {
 
 body h3 {
   color: #5932a3;
-  margin-top: 100px;
+  margin-top: 200px;
+  font-size: 34px;
 }
 
 body div {
@@ -19,16 +20,21 @@ body div form {
   justify-content: space-between;
 }
 
+body div form input {
+  font-size: 24px;
+  min-width: 300px;
+}
+
 body div form button {
   height: 40px;
   background-color: #f8e74a;
   border: none;
   border-radius: 2px;
   color: #24657a;
-  font-size: 16px;
+  font-size: 24px;
 }
 
 body div form button:hover {
-  background-color: #ffe602;
+  background-color: #ffffa8;
   cursor: pointer;
 }

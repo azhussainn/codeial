@@ -15,7 +15,7 @@ textarea {
 
 .addComment {
   width: 75%;
-  font-size: 10px;
+  font-size: 14px;
 }
 
 #feed-posts {
@@ -33,8 +33,8 @@ textarea {
   color: white;
   border: none;
   border-radius: 2px;
-  height: 22px;
-  font-size: 10px;
+  height: 30px;
+  font-size: 16px;
 }
 
 #feed-posts #post-submit:hover, #feed-posts button:hover {
@@ -44,11 +44,11 @@ textarea {
 
 #feed-posts small {
   padding: 4px;
-  height: 12px;
+  height: 18px;
   border-radius: 2px;
   display: flex;
   justify-content: center;
-  font-size: 10px;
+  font-size: 16px;
 }
 
 #feed-posts a {
@@ -86,7 +86,7 @@ textarea {
 
 #feed-posts #posts-list-container ul .onePost .post-content .post-text {
   margin: 10px 0 8px 10px;
-  font-size: 14px;
+  font-size: 20px;
 }
 
 #feed-posts #posts-list-container ul .onePost .post-content .post-options {
@@ -117,7 +117,7 @@ textarea {
 
 #feed-posts #posts-list-container .post_comments {
   margin: 10px 10px 8px 10px;
-  font-size: 12px;
+  font-size: 15px;
   text-align: justify;
 }
 
@@ -135,7 +135,7 @@ textarea {
 
 #feed-posts #posts-list-container .post_comments .post-comments_list .post-content .post-text {
   width: 78%;
-  font-size: 12px;
+  font-size: 16px;
 }
 
 #feed-posts #posts-list-container .post_comments .post-comments_list .post-content .comment-options {
@@ -151,7 +151,7 @@ textarea {
   margin-bottom: 3px;
   display: flex;
   justify-content: center;
-  font-size: 8px;
+  font-size: 14px;
 }
 
 #feed-posts #posts-list-container .post_comments .post-comments_list .post-content .comment-options .comment-user-name:hover {
@@ -164,7 +164,6 @@ textarea {
   color: white;
   border: none;
   border-radius: 2px;
-  font-size: 8px;
 }
 
 #feed-posts #posts-list-container .post_comments .post-comments_list .post-content .comment-options .delete-comment:hover {
@@ -180,7 +179,7 @@ textarea {
 }
 
 #user-friends h4 {
-  font-size: 14px;
+  font-size: 20px;
   color: #1e657c;
   margin: 8px;
   text-align: center;
@@ -189,21 +188,20 @@ textarea {
 
 #user-friends .friends {
   margin: 4px auto;
-  font-size: 12px;
   display: flex;
   flex-direction: column;
-  max-width: 50px;
+  max-width: 100px;
 }
 
 #user-friends .friends a {
   color: white;
-  height: 14px;
+  min-height: 20px;
   background-color: #523577;
   border-radius: 2px;
   padding: 4px;
   text-decoration: none;
   text-align: center;
-  font-size: 10px;
+  font-size: 16px;
 }
 
 #user-friends .friends a:hover {
