@@ -1,4 +1,4 @@
-<li class = "onePost">
+<li class = "onePost" id = "post-<%= post._id %>">
     <div class = "post-content">
         <p class = "post-text">
             <%= post.content%>
@@ -9,7 +9,7 @@
             </small class = "post-delete">
             <%if(locals.user && locals.user.id == post.user.id){%>
                 <small class = "delete-post">
-                    <a href="/posts/destroy/<%= post.id%>">Delete</a>
+                    <a href="/posts/destroy/<%= post.id%>" class = "delete-post-button">Delete</a>
                 </small>
             <%}%>
         </div>
@@ -17,7 +17,7 @@
 
     <div class = "post_comments">
         <% if(locals.user){%>
-            <form action="/comment/create" method="POST" class = "comment-form">
+            <form action="/comment/create" method="POST" class = "comment-form" id = "post-<%= post._id %>-comments-form">
                 <textarea class = "addComment" cols="20" rows="3" type="text" name = "content" placeholder="Type Here"></textarea>
                 <input type="hidden" name="post" value = "<%=post._id%>">
                 <br>

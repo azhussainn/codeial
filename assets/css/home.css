@@ -97,7 +97,8 @@ textarea {
 
 #feed-posts #posts-list-container ul .onePost .post-content .post-options .post-name {
   background-color: #523577;
-  margin-bottom: 3px;
+  margin-bottom: 4px;
+  margin-top: 4px;
   color: white;
 }
 
@@ -108,6 +109,7 @@ textarea {
 
 #feed-posts #posts-list-container ul .onePost .post-content .post-options .delete-post {
   background-color: #523577;
+  margin-bottom: 5px;
 }
 
 #feed-posts #posts-list-container ul .onePost .post-content .post-options .delete-post:hover {
@@ -128,24 +130,25 @@ textarea {
   margin: 8px;
 }
 
-#feed-posts #posts-list-container .post_comments .post-comments_list .post-content {
+#feed-posts #posts-list-container .post_comments .post-comments_list .comment-content {
+  margin-top: 12px;
   display: flex;
   justify-content: space-between;
 }
 
-#feed-posts #posts-list-container .post_comments .post-comments_list .post-content .post-text {
+#feed-posts #posts-list-container .post_comments .post-comments_list .comment-content .post-text {
   width: 78%;
   font-size: 16px;
 }
 
-#feed-posts #posts-list-container .post_comments .post-comments_list .post-content .comment-options {
+#feed-posts #posts-list-container .post_comments .post-comments_list .comment-content .comment-options {
   margin-left: 18px;
   display: flex;
   justify-content: center;
   flex-direction: column;
 }
 
-#feed-posts #posts-list-container .post_comments .post-comments_list .post-content .comment-options .comment-user-name {
+#feed-posts #posts-list-container .post_comments .post-comments_list .comment-content .comment-options .comment-user-name {
   background-color: #523577;
   color: white;
   margin-bottom: 3px;
@@ -154,19 +157,19 @@ textarea {
   font-size: 14px;
 }
 
-#feed-posts #posts-list-container .post_comments .post-comments_list .post-content .comment-options .comment-user-name:hover {
+#feed-posts #posts-list-container .post_comments .post-comments_list .comment-content .comment-options .comment-user-name:hover {
   background-color: #d17eb0;
   cursor: pointer;
 }
 
-#feed-posts #posts-list-container .post_comments .post-comments_list .post-content .comment-options .delete-comment {
+#feed-posts #posts-list-container .post_comments .post-comments_list .comment-content .comment-options .delete-comment {
   background-color: #523577;
   color: white;
   border: none;
   border-radius: 2px;
 }
 
-#feed-posts #posts-list-container .post_comments .post-comments_list .post-content .comment-options .delete-comment:hover {
+#feed-posts #posts-list-container .post_comments .post-comments_list .comment-content .comment-options .delete-comment:hover {
   background-color: #d17eb0;
   cursor: pointer;
 }

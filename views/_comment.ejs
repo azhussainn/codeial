@@ -1,4 +1,4 @@
-<li class = 'post-content'>
+<li class = 'comment-content' id = "comment-<%= comment._id %>">
     <div class ="post-text">
         <p>
             <%= comment.content%>
@@ -11,7 +11,7 @@
 
         <%if(locals.user && (locals.user.id == comment.user.id || locals.user.id == post.user.id)){%>
             <small class = "delete-comment">
-                <a href="/comment/destroy/<%=comment.id%>">Delete</a>
+                <a href="/comment/destroy/<%=comment.id%>" class = "delete-comment-button">Delete</a>
             </small>
         <%}%>
     </div>
