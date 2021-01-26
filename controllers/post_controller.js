@@ -7,7 +7,6 @@ module.exports.create = async function(req, res){
                 content : req.body.content,
                 user : req.user._id
             });
-
             if(req.xhr){
                 return res.status(200).json({
                     data : {
@@ -43,7 +42,7 @@ module.exports.destroy = async function(req, res){
             post.remove();
 
             await Comment.deleteMany({post : req.params.id});
-
+            
             if(req.xhr){
                 return res.status(200).json({
                     data : {
@@ -53,6 +52,7 @@ module.exports.destroy = async function(req, res){
                     message : 'Post deleted'
                 });
             }else{
+                
                 req.flash('success', 'Post Deleted!');
                 return res.redirect('back');
             }

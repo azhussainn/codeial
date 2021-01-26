@@ -26,6 +26,7 @@ module.exports.create = async function(req, res){
                         message: "Post created!"
                     });
                 }else{
+                    console.log('not xhr');
                     req.flash('success', 'Comment Published!');
                     return res.redirect('back');
                 }

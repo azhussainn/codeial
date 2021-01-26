@@ -17,6 +17,7 @@
 
                     deletePost($(`.delete-post-button`, newPost));
                     notification('success', "Post Published");
+                    new PostComments(data.data.post._id);
                 }, error : function(error){
                     console.log(error.responseText);
                 }
@@ -89,4 +90,5 @@
         }).show();
     };
     createPost();
+
 }

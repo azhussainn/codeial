@@ -23,18 +23,21 @@ class PostComments{
         let pSelf = this;
         this.newCommentForm.submit(function(e){
             e.preventDefault();
+
             let self = this;
 
             $.ajax({
                 type: 'post',
-                url: '/comments/create',
+                url: '/comment/create',
                 data: $(self).serialize(),
                 success: function(data){
+
                     let newComment = pSelf.newCommentDom(data.data.comment);
-                    $(`#post-comments-${post._id}`).prepend(newComment);
-                    pSelf.deleteComment($('.delete-comment-button', newComment));
+                    $(`#post-comments-${postId}`).prepend(newComment);
+                    pSelf.deleteComment($(' .delete-comment-button', newComment));
 
                     notification('success', "Comment published!");
+                    
 
                 }, error: function(error){
                     console.log(error.responseText);
