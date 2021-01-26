@@ -1,20 +1,24 @@
 <link rel="stylesheet" href="/css/user_profile.css">
 <section>
-    <img src="<%= user.avatar %>" alt="<%= user.name %>" width="100">
+    <div id = "profile-pic-div">
+        <img id = "profile-pic" src="<%= user.avatar %>" alt="<%= user.name %>">
+    </div>
     
     <h2>Welcome <%= user.name%></h2>
     <h4>Edit Details</h4>
     <% if(user.id == profile_user.id){%>
         <!-- If user matches then show the form -->
-        <form action="/user/update/<%= profile_user.id %>" method="POST" enctype="multipart/form-data">
+        <form runat="server" id = "profile-form" action="/user/update/<%= profile_user.id %>" method="POST" enctype="multipart/form-data">
             <label for="name">Name</label>
             <input type="text" name = "name"  value="<%= profile_user.name %>" placeholder="Your Name" required/>
             <br>
             <label for="email">Email</label>
-            <input type="email" name="email" placeholder="Your Email" value="<%= profile_user.email %>" required/>
+            <input type="email" name="email"  placeholder="Your Email" value="<%= profile_user.email %>" required/>
             <br>
-            <input type="file" name = "avatar" placeholder="profile picture">
+            <input id = "getFile" type="file" onchange="readURL(this);" name = "avatar" placeholder="profile picture">
             <br>
+            <a href="#" id = "close-preview" onclick = "closePreview()">X</a>
+            <img id = "my-photo"  src="#" alt="your image" />
             <input id = "submit" type="submit" value="Update">
         </form>
     <%}else{%>
@@ -23,3 +27,4 @@
         <p><%= profile_user.email%></p>
     <%}%>
 </section>
+<script src="/js/preview_photos.js"></script>

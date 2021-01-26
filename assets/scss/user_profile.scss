@@ -1,6 +1,16 @@
 section{
     
     margin: 40px 0 8px 10px;
+    #profile-pic-div{
+        max-width: 250px;
+        
+        #profile-pic{
+            border: 2px solid rgb(99, 95, 95);
+            box-shadow: 0 3px 2px rgba(0, 0, 0, 0.3);
+            max-width: 240px;
+            border-radius: 10px;
+        }
+    }
     h2{
         font-size: 24px;
         text-align: center;
@@ -29,10 +39,46 @@ section{
             color: white;
             border: none;
             border-radius: 2px;
+            margin-top: 10px;
+            margin-bottom: 100px;
         }
         #submit:hover{
             background-color: rgb(209, 126, 176);
             cursor: pointer;
         }
+        #my-photo{
+            display: none;
+            border: 2px solid rgb(99, 95, 95);
+            box-shadow: 0 3px 2px rgba(0, 0, 0, 0.3);
+            border-radius: 10px;
+            max-height: 100%;
+        }
+        #close-preview{
+            font-size: 34px;
+            color: white;
+            text-decoration: none;
+            background-color: rgb(82, 53, 119);
+            width: 40px;
+            height: 40px;
+            text-align: center;
+            position: relative;
+            left: 605px;
+            border-radius: 5px;
+            display: none;
+        }
+        #close-preview:hover{
+            background-color: rgb(209, 126, 176);
+        }
+        ::-webkit-file-upload-button {
+            background: rgb(82, 53, 119);
+            color: white;
+            border: none;
+            border-radius: 2px;
+            cursor: pointer;
+        }
+        #getFile:hover{
+            background-color: rgb(209, 126, 176);
+            cursor: pointer;
+          }
     }
 }

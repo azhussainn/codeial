@@ -2,6 +2,17 @@ section {
   margin: 40px 0 8px 10px;
 }
 
+section #profile-pic-div {
+  max-width: 250px;
+}
+
+section #profile-pic-div #profile-pic {
+  border: 2px solid #635f5f;
+  box-shadow: 0 3px 2px rgba(0, 0, 0, 0.3);
+  max-width: 240px;
+  border-radius: 10px;
+}
+
 section h2 {
   font-size: 24px;
   text-align: center;
@@ -36,9 +47,50 @@ section form #submit {
   color: white;
   border: none;
   border-radius: 2px;
+  margin-top: 10px;
+  margin-bottom: 100px;
 }
 
 section form #submit:hover {
+  background-color: #d17eb0;
+  cursor: pointer;
+}
+
+section form #my-photo {
+  display: none;
+  border: 2px solid #635f5f;
+  box-shadow: 0 3px 2px rgba(0, 0, 0, 0.3);
+  border-radius: 10px;
+  max-height: 100%;
+}
+
+section form #close-preview {
+  font-size: 34px;
+  color: white;
+  text-decoration: none;
+  background-color: #523577;
+  width: 40px;
+  height: 40px;
+  text-align: center;
+  position: relative;
+  left: 605px;
+  border-radius: 5px;
+  display: none;
+}
+
+section form #close-preview:hover {
+  background-color: #d17eb0;
+}
+
+section form ::-webkit-file-upload-button {
+  background: #523577;
+  color: white;
+  border: none;
+  border-radius: 2px;
+  cursor: pointer;
+}
+
+section form #getFile:hover {
   background-color: #d17eb0;
   cursor: pointer;
 }
