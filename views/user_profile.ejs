@@ -1,5 +1,7 @@
 <link rel="stylesheet" href="/css/user_profile.css">
 <section>
+    <img src="<%= user.avatar %>" alt="<%= user.name %>" width="100">
+    
     <h2>Welcome <%= user.name%></h2>
     <h4>Edit Details</h4>
     <% if(user.id == profile_user.id){%>
