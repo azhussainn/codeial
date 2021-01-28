@@ -1,0 +1,18 @@
+#google{
+
+    margin-top: 16px;
+    a{
+        text-decoration: none;
+        background-color: rgb(248, 231, 74);
+        height: 30px;
+        border: none;
+        border-radius: 3px;
+        color: rgb(36, 101, 122);
+        font-size: 25px;
+        padding: 5px;
+        min-width: 300px;
+    }
+    a:hover{
+        background-color: rgb(255, 255, 168);
+    }
+}

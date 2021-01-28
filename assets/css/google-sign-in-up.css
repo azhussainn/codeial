@@ -1,0 +1,19 @@
+#google {
+  margin-top: 16px;
+}
+
+#google a {
+  text-decoration: none;
+  background-color: #f8e74a;
+  height: 30px;
+  border: none;
+  border-radius: 3px;
+  color: #24657a;
+  font-size: 25px;
+  padding: 5px;
+  min-width: 300px;
+}
+
+#google a:hover {
+  background-color: #ffffa8;
+}

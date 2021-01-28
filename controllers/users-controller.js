@@ -1,7 +1,7 @@
 const User = require('../models/user');
 const path = require('path');
 const fs = require('fs');
-const acceptableFiles = ["bmp", "jpg", "jpeg", "png", "gif"];
+
 
 module.exports.profile = function(req, res){
     User.findById(req.params.id, function(err, user){
@@ -35,13 +35,10 @@ module.exports.update = async function(req, res){
                     //this is saving the path of the uploaded file into the avatar field in the user
                     user.avatar = User.avatarPath + "/" + req.file.filename;
                 }
-
                 user.save();
                 req.flash('success', 'Profile updated');
                 return res.redirect('back');
             });
-
-
 
         } catch (error) {
             req.flash('error', error);
