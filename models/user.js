@@ -35,7 +35,15 @@ let storage = multer.diskStorage({
   });
 
 //static methods
-userSchema.statics.uploadedAvatar = multer({ storage: storage }).single('avatar');
+userSchema.statics.uploadedAvatar = multer({ storage: storage,
+    fileFilter: function (req, file, callback) {
+        var ext = path.extname(file.originalname);
+        if(ext !== '.png' && ext !== '.jpg' && ext !== '.jpeg') {
+            return callback(new Error('Only images are allowed'))
+        }
+        callback(null, true)
+    }
+}).single('avatar');
 userSchema.statics.avatarPath = AVATAR_PATH;
 
 

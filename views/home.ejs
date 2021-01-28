@@ -2,7 +2,7 @@
 <div id = "home-container">
     <section id = "feed-posts">
         <%if(locals.user){%>
-            <form action="/posts/create" id = "post-form" method="POST">
+            <form runat="server" action="/posts/create" id = "post-form" method="POST" enctype="multipart/form-data">
                 <textarea id = "createPost" name="content"  cols="2" rows="3" placeholder="Type Here..."></textarea>
                 <br>
                 <input id = "post-submit" type="submit" value="Post" id = "post-submit">

@@ -1,5 +1,9 @@
 const mongoose = require('mongoose');
 
+const multer = require('multer');
+const path = require('path');
+const STATUS_PATH = path.join('/uploads/users/posts');
+
 const postSchema = new mongoose.Schema({
     content : {
         type : String, 
@@ -19,6 +23,8 @@ const postSchema = new mongoose.Schema({
 }, {
     timestamps : true
 });
+
+postSchema.statics.statusPath = STATUS_PATH;
 
 const Post = mongoose.model('Post', postSchema);
 
