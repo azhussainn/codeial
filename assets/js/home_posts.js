@@ -16,8 +16,9 @@
                     $(`#posts-list-container>ul`).prepend(newPost);
 
                     deletePost($(`.delete-post-button`, newPost));
-                    notification('success', "Post Published");
                     new PostComments(data.data.post._id);
+                    notification('success', "Post Published");
+
                 }, error : function(error){
                     console.log(error.responseText);
                 }
@@ -46,7 +47,7 @@
 
         <div class = "post_comments">
 
-            <form action="/comment/create" method="POST" class = "comment-form">
+            <form action="/comment/create" method="POST" class = "comment-form" id = "post-${post._id}-comments-form">
                 <textarea class = "addComment" cols="20" rows="3" type="text" name = "content" placeholder="Type Here"></textarea>
                 <input type="hidden" name="post" value = "${post._id}">
                 <br>

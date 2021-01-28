@@ -5,6 +5,7 @@
 class PostComments{
     // constructor is used to initialize the instance of the class whenever a new instance is created
     constructor(postId){
+        console.log('constructor called');
         this.postId = postId;
         this.postContainer = $(`#post-${postId}`);
         this.newCommentForm = $(`#post-${postId}-comments-form`);
@@ -59,7 +60,7 @@ class PostComments{
         </div>
         <div class = "comment-options">
             <small class = "comment-user-name">
-                {$comment.user.name}
+                ${comment.user.name}
             </small>
             <small class = "delete-comment">
                 <a href="/comment/destroy/${comment._id}" class = "delete-comment-button">Delete</a>
