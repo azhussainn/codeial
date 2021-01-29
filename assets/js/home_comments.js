@@ -5,7 +5,6 @@
 class PostComments{
     // constructor is used to initialize the instance of the class whenever a new instance is created
     constructor(postId){
-        console.log('constructor called');
         this.postId = postId;
         this.postContainer = $(`#post-${postId}`);
         this.newCommentForm = $(`#post-${postId}-comments-form`);
@@ -32,13 +31,11 @@ class PostComments{
                 url: '/comment/create',
                 data: $(self).serialize(),
                 success: function(data){
-
                     let newComment = pSelf.newCommentDom(data.data.comment);
                     $(`#post-comments-${postId}`).prepend(newComment);
                     pSelf.deleteComment($(' .delete-comment-button', newComment));
 
                     notification('success', "Comment published!");
-                    
 
                 }, error: function(error){
                     console.log(error.responseText);
