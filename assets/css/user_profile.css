@@ -94,3 +94,10 @@ section form #getFile:hover {
   background-color: #d17eb0;
   cursor: pointer;
 }
+
+section #other-pic {
+  border: 2px solid #635f5f;
+  box-shadow: 0 3px 2px rgba(0, 0, 0, 0.3);
+  max-width: 240px;
+  border-radius: 10px;
+}

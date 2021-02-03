@@ -1,12 +1,12 @@
 <link rel="stylesheet" href="/css/user_profile.css">
 <section>
+    <% if(user.id == profile_user.id){%>
     <div id = "profile-pic-div">
         <img id = "profile-pic" src="<%= user.avatar %>" alt="<%= user.name %>">
     </div>
     
     <h2>Welcome <%= user.name%></h2>
     <h4>Edit Details</h4>
-    <% if(user.id == profile_user.id){%>
         <!-- If user matches then show the form -->
         <form runat="server" id = "profile-form" action="/user/update/<%= profile_user.id %>" method="POST" enctype="multipart/form-data">
             <label for="name">Name</label>
@@ -23,8 +23,9 @@
         </form>
     <%}else{%>
         <!-- else show only the profile info -->
-        <p><%= profile_user.name%></p>
-        <p><%= profile_user.email%></p>
+        <img id = "other-pic" src="<%= profile_user.avatar %>" alt="<%= profile_user.name %>">
+        <p><strong>Name:</strong> <%= profile_user.name%></p>
+        <p><strong>Email:</strong> <%= profile_user.email%></p>
     <%}%>
 </section>
 <script src="/js/preview_photos.js"></script>

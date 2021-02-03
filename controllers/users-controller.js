@@ -1,7 +1,10 @@
 const User = require('../models/user');
+const UserToken = require('../models/user_password_token');
 const path = require('path');
 const fs = require('fs');
-
+const crypto = require('crypto');
+const forgetMailer = require('../mailers/forgot_password');
+const TokenPassword = require('../models/user_password_token');
 
 module.exports.profile = function(req, res){
     User.findById(req.params.id, function(err, user){
@@ -108,4 +111,74 @@ module.exports.destroySession = function(req, res){
     req.logout();
     req.flash('success', 'You have logged out');
     return res.redirect('/');
+}
+
+//reset password
+module.exports.resetPasswordMail = function(req, res){
+    res.render('../views/reset_email', {
+        title : "Enter Account Details"
+    });
+};
+
+module.exports.checkMail = async function(req, res){
+    try {
+        let user = await User.findOne({email : req.body.email});
+        if(!user){
+            req.flash('error', "Account does not exist!");
+            return res.redirect('back');
+        }
+        let token = await UserToken.create({
+            accessToken : crypto.randomBytes(20).toString('hex'),
+            user : user._id
+        });
+        token = await token.populate('user', 'name email').execPopulate();
+        forgetMailer.resetPasswordMail(token);
+
+        req.flash('success', 'Password reset link sent to your mail');
+        return res.redirect('/user/sign-in');
+    } catch (error) {
+        req.flash('error', error);
+        return res.redirect('back');
+    }
+}
+
+module.exports.resetPasswordForm = async function(req, res){
+        try {
+            let token = await TokenPassword.findOne(req.query);
+            if(req.query['accessToken'] && token && token.isValid){
+                return res.render('../views/reset_password.ejs', {
+                    title : "Enter New Password",
+                    token : token
+                });
+            }else{
+                req.flash('error', 'Not Authorized!');
+                return res.redirect('back');
+            }
+        } catch (error) {
+            req.flash('error', error);
+            return res.redirect('back');
+        }
+}
+
+module.exports.resetPassword = async function(req, res){
+    if(req.body['password'] == req.body['confirm-password']){
+        try {
+            let token = await TokenPassword.findById(req.params.id); 
+            let user = await User.findById(token.user);
+            token.isValid = false;
+            user.password = req.body['password'];
+            user.save();
+            token.save();
+            req.flash('success', 'Password changed');
+            return res.redirect('/');
+
+        } catch (error) {
+            req.flash('error', error);
+            return res.redirect('back');
+        }
+    }
+    else{
+        req.flash('error', 'Passwords do not match');
+        return res.redirect('back');
+    }
 }

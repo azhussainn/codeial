@@ -81,4 +81,10 @@ section{
             cursor: pointer;
           }
     }
+    #other-pic{
+        border: 2px solid rgb(99, 95, 95);
+            box-shadow: 0 3px 2px rgba(0, 0, 0, 0.3);
+            max-width: 240px;
+            border-radius: 10px;
+    }
 }
