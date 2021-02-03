@@ -146,6 +146,8 @@ module.exports.resetPasswordForm = async function(req, res){
         try {
             let token = await TokenPassword.findOne(req.query);
             if(req.query['accessToken'] && token && token.isValid){
+                token = await token.populate('user', 'name').execPopulate();
+                console.log(token);
                 return res.render('../views/reset_password.ejs', {
                     title : "Enter New Password",
                     token : token
