@@ -6,7 +6,7 @@
         <div class = "post-options">
             <small class = "post-name">
                 <%= post.user.name%>
-            </small class = "post-delete">
+            </small>
             <%if(locals.user && locals.user.id == post.user.id){%>
                 <small class = "delete-post">
                     <a href="/posts/destroy/<%= post.id%>" class = "delete-post-button">Delete</a>

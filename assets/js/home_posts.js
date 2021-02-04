@@ -17,8 +17,15 @@
 
                     deletePost($(`.delete-post-button`, newPost));
                     new PostComments(data.data.post._id);
-                    notification('success', "Post Published");
 
+                    new Noty({
+                        theme: 'relax',
+                        text: "Post Published",
+                        type: "success",
+                        layout: 'topRight',
+                        timeout: 1500
+
+                    }).show();
                 }, error : function(error){
                     console.log(error.responseText);
                 }
@@ -37,7 +44,7 @@
             <div class = "post-options">
                 <small class = "post-name">
                     ${Username}
-                </small class = "post-delete">
+                </small>
 
                 <small class = "delete-post">
                     <a href="/posts/destroy/${post._id}" class = "delete-post-button">Delete</a>
@@ -72,7 +79,14 @@
                 url : $(deleteLink).prop('href'),
                 success : function(data){
                     $(`#post-${data.data.post_id}`).remove();
-                    notification('success', "Post Deleted");
+                    new Noty({
+                        theme: 'relax',
+                        text: "Post Deleted",
+                        type: "success",
+                        layout: 'topRight',
+                        timeout: 1500
+
+                    }).show();
                 },error : function(error){
                     notification('error', error);
                     console.log(error.responseText);
@@ -80,16 +94,18 @@
             });
         });
     };
-    let notification = function(isType, message){
-        new Noty({
-            theme: 'relax',
-            text: message,
-            type: isType,
-            layout: 'topRight',
-            timeout: 1500
+    // let convertPostsToAjax = function(){
+    //     $('#posts-list-container>ul>li').each(function(){
+    //         let self = $(this);
+    //         let deleteButton = $(' .delete-post-button', self);
+    //         deletePost(deleteButton);
 
-        }).show();
-    };
+    //         // get the post's id by splitting the id attribute
+    //         let postId = self.prop('id').split("-")[1]
+    //         new PostComments(postId);
+    //     });
+    // }
     createPost();
+    // convertPostsToAjax();
 
 }

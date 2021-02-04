@@ -35,10 +35,25 @@ class PostComments{
                     $(`#post-comments-${postId}`).prepend(newComment);
                     pSelf.deleteComment($(' .delete-comment-button', newComment));
 
-                    notification('success', "Comment published!");
+                    new Noty({
+                        theme: 'relax',
+                        text: 'Comment published!',
+                        type: 'success',
+                        layout: 'topRight',
+                        timeout: 1500
+            
+                    }).show();
 
                 }, error: function(error){
                     console.log(error.responseText);
+                    new Noty({
+                        theme: 'relax',
+                        text: error,
+                        type: 'error',
+                        layout: 'topRight',
+                        timeout: 1500
+            
+                    }).show();
                 }
             });
 
@@ -75,23 +90,26 @@ class PostComments{
                 url: $(deleteLink).prop('href'),
                 success: function(data){
                     $(`#comment-${data.data.comment_id}`).remove();
+                    new Noty({
+                        theme: 'relax',
+                        text: 'Comment Deleted',
+                        type: 'success',
+                        layout: 'topRight',
+                        timeout: 1500
 
-                    notification("success", "Comment Deleted");
+                    }).show();
                 },error: function(error){
-                    notification('error', error);
+                    new Noty({
+                        theme: 'relax',
+                        text: error,
+                        type: 'error',
+                        layout: 'topRight',
+                        timeout: 1500
+
+                    }).show();
                     console.log(error.responseText);
                 }
             });
         });
-    }
-    notification(isType, message){
-        new Noty({
-            theme: 'relax',
-            text: message,
-            type: isType,
-            layout: 'topRight',
-            timeout: 1500
-
-        }).show();
     }
 }
