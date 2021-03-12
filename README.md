@@ -1,2 +1,2 @@
 # codeial
-Complete Social Media website (In Development Phase)
+Complete Social Media website
